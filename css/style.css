@@ -1,0 +1,528 @@
+
+/* Configurações gerais */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #242424;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, p {
+    margin-top: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    color: #3765b0;
+  }
+  
+  a:focus-visible {
+    outline: 2px solid #3765b0;
+    outline-offset: 5px;
+  }
+  
+  /* Estrutura da página */
+  
+  .pagina {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+  
+  .cabecalho {
+    grid-area: header;
+    height: 90px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e4e4e0;
+  }
+  
+  .nome-site {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+  }
+  
+  .nome-site span {
+    color: #3765b0;
+  }
+  
+  .cabecalho p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+  }
+  
+  /* Menu lateral */
+  
+  .lateral {
+    grid-area: sidebar;
+    padding: 50px 25px;
+    border-right: 1px solid #e4e4e0;
+  }
+  
+  .lateral nav {
+    position: sticky;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .lateral nav p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+  }
+  
+  .lateral nav a {
+    font-size: 14px;
+    color: #555;
+    transition: color 0.2s;
+  }
+  
+  .lateral nav a:hover {
+    color: #3765b0;
+  }
+  
+  .atividade {
+    margin-top: 65px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .atividade span {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .atividade p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  /* Conteúdo principal */
+  
+  main {
+    grid-area: main;
+    min-width: 0;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 7%;
+    margin: 0 auto;
+  }
+  
+  .introducao {
+    padding: 100px 0 85px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .categoria {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3765b0;
+    letter-spacing: 1px;
+  }
+  
+  .introducao h1 {
+    margin: 25px 0;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.13;
+    letter-spacing: -2px;
+    font-weight: 700;
+  }
+  
+  .introducao h1 span {
+    color: #3765b0;
+  }
+  
+  .texto-introducao {
+    max-width: 650px;
+    font-size: 17px;
+    color: #606060;
+  }
+  
+  .introducao-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+    font-size: 13px;
+    color: #777;
+  }
+  
+  /* Seções */
+  
+  .conteudo-secao {
+    padding: 75px 0;
+    border-bottom: 1px solid #ddd;
+    scroll-margin-top: 20px;
+  }
+  
+  .titulo-secao {
+    margin-bottom: 35px;
+  }
+  
+  .titulo-secao h2 {
+    margin-bottom: 12px;
+    font-size: 30px;
+    letter-spacing: -1px;
+  }
+  
+  .titulo-secao p {
+    max-width: 620px;
+    color: #666;
+    font-size: 15px;
+  }
+  
+  .texto-secao {
+    max-width: 800px;
+  }
+  
+  .texto-secao p {
+    color: #505050;
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  
+  .link-externo {
+    display: inline-block;
+    margin: 10px 0 30px;
+    color: #285caa;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .link-externo:hover {
+    text-decoration: underline;
+  }
+  
+  /* Lista com nth-child */
+  
+  .lista-area {
+    margin-top: 30px;
+  }
+  
+  .lista-area h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  
+  .lista-conceitos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  .lista-conceitos li {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  .lista-conceitos li:nth-child(odd) {
+    background: #ffffff;
+  }
+  
+  .lista-conceitos li:nth-child(even) {
+    background: #ededeb;
+  }
+  
+  .lista-conceitos strong {
+    flex: 0 0 155px;
+  }
+  
+  .lista-conceitos span {
+    color: #666;
+  }
+  
+  /* Cartões com Flexbox */
+  
+  .tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .tecnologia {
+    flex: 1 1 220px;
+    min-width: 0;
+    min-height: 270px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+  }
+  
+  .tecnologia-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .icone-tecnologia {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .tecnologia small {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+  
+  .tecnologia h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .tecnologia p {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: #444;
+  }
+  
+  /* Cada tecnologia tem uma cor própria */
+  
+  .tecnologia.html {
+    background: #f6e9df;
+    border-color: #ecd4c2;
+  }
+  
+  .tecnologia.html .icone-tecnologia {
+    color: #ba5528;
+  }
+  
+  .tecnologia.css {
+    background: #e3ebf8;
+    border-color: #cbd9ef;
+  }
+  
+  .tecnologia.css .icone-tecnologia {
+    color: #3265b5;
+  }
+  
+  .tecnologia.javascript {
+    background: #f9f0d5;
+    border-color: #efdfad;
+  }
+  
+  .tecnologia.javascript .icone-tecnologia {
+    color: #947200;
+  }
+  
+  .tecnologia.svg {
+    background: #eee6f4;
+    border-color: #ddcde9;
+  }
+  
+  .tecnologia.svg .icone-tecnologia {
+    color: #8251a2;
+  }
+  
+  /* Comparação de layouts */
+  
+  .comparacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .comparacao article {
+    flex: 1 1 270px;
+    min-width: 0;
+  }
+  
+  .comparacao h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+  }
+  
+  .comparacao p {
+    color: #5d5d5d;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .comparacao code {
+    display: inline-block;
+    padding: 10px 14px;
+    background: #e8e8e5;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+  
+  /* Rodapé */
+  
+  .rodape {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 6%;
+    border-top: 1px solid #e4e4e0;
+    background: #ffffff;
+  }
+  
+  .rodape p {
+    margin: 0;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  /* Responsividade */
+  
+  @media (max-width: 850px) {
+    .pagina {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+    }
+  
+    .lateral {
+      padding: 20px 6%;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .lateral nav {
+      position: static;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 15px 25px;
+    }
+  
+    .lateral nav p,
+    .atividade {
+      display: none;
+    }
+  
+    main {
+      padding: 0 6%;
+    }
+  
+    .introducao {
+      padding: 75px 0 60px;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .cabecalho {
+      height: auto;
+      min-height: 80px;
+      padding: 20px 5%;
+    }
+  
+    .cabecalho p {
+      display: none;
+    }
+  
+    .lateral {
+      padding: 18px 5%;
+    }
+  
+    .lateral nav {
+      gap: 12px 20px;
+    }
+  
+    .lateral nav a {
+      font-size: 13px;
+    }
+  
+    main {
+      padding: 0 5%;
+    }
+  
+    .introducao {
+      padding: 60px 0 50px;
+    }
+  
+    .introducao h1 {
+      font-size: 38px;
+      letter-spacing: -1.5px;
+    }
+  
+    .texto-introducao {
+      font-size: 15px;
+    }
+  
+    .introducao-info {
+      gap: 15px;
+    }
+  
+    .conteudo-secao {
+      padding: 55px 0;
+    }
+  
+    .titulo-secao h2 {
+      font-size: 25px;
+    }
+  
+    .lista-conceitos li {
+      flex-direction: column;
+      gap: 5px;
+      padding: 15px;
+    }
+  
+    .lista-conceitos strong {
+      flex: auto;
+    }
+  
+    .tecnologia {
+      flex-basis: 100%;
+      min-height: auto;
+    }
+  
+    .tecnologia-topo {
+      margin-bottom: 20px;
+    }
+  
+    .comparacao {
+      gap: 30px;
+    }
+  
+    .rodape {
+      flex-direction: column;
+      gap: 5px;
+      padding: 25px 5%;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  

@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atividade prática sobre CSS, Flexbox e Grid.">
+  <title>Fundamentos do Front-End</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="pagina">
+
+    <header class="cabecalho">
+      <a class="nome-site" href="#inicio">front-end<span>.</span></a>
+      <p>Desenvolvimento Front-End para Web</p>
+    </header>
+
+    <aside class="lateral">
+      <nav aria-label="Navegação da página">
+        <p>Conteúdo</p>
+        <a href="#inicio">Introdução</a>
+        <a href="#css">Estilização com CSS</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#layouts">Organização de layouts</a>
+      </nav>
+
+      <div class="atividade">
+        <span>Atividade 04</span>
+        <p>Práticas de CSS</p>
+      </div>
+    </aside>
+
+    <main id="inicio">
+
+      <section class="introducao">
+        <p class="categoria">DESENVOLVIMENTO WEB</p>
+
+        <h1>Construindo interfaces<br>para a web<span>.</span></h1>
+
+        <p class="texto-introducao">
+          O desenvolvimento front-end combina diferentes tecnologias
+          para transformar estruturas e informações em páginas web
+          organizadas, acessíveis e adaptáveis.
+        </p>
+
+        <div class="introducao-info">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>SVG</span>
+        </div>
+      </section>
+
+      <section class="conteudo-secao" id="css">
+        <div class="titulo-secao">
+          <h2>Estilização com CSS</h2>
+          <p>
+            O CSS define como os elementos HTML serão apresentados
+            na tela, permitindo controlar aspectos visuais e a
+            organização do conteúdo.
+          </p>
+        </div>
+
+        <div class="texto-secao">
+          <p>
+            Com seletores e propriedades, podemos alterar fontes,
+            cores, margens, espaçamentos e outros detalhes de
+            uma página. As pseudoclasses também permitem modificar
+            a aparência dos elementos conforme a interação do usuário.
+          </p>
+
+          <p>
+            Além da estilização básica, o CSS disponibiliza recursos
+            como Flexbox e Grid, que facilitam a construção de
+            interfaces responsivas em diferentes dispositivos.
+          </p>
+
+          <a
+            class="link-externo"
+            href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Documentação de CSS <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="lista-area">
+          <h3>Conceitos importantes</h3>
+
+          <ul class="lista-conceitos">
+            <li>
+              <strong>Seletores</strong>
+              <span>Identificam os elementos que receberão estilos.</span>
+            </li>
+            <li>
+              <strong>Propriedades</strong>
+              <span>Definem características como cor, tamanho e espaçamento.</span>
+            </li>
+            <li>
+              <strong>Pseudoclasses</strong>
+              <span>Aplicam estilos em estados específicos dos elementos.</span>
+            </li>
+            <li>
+              <strong>Media queries</strong>
+              <span>Permitem adaptar o layout a diferentes telas.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="conteudo-secao" id="tecnologias">
+        <div class="titulo-secao">
+          <h2>Tecnologias fundamentais</h2>
+          <p>
+            Cada tecnologia possui uma responsabilidade no
+            desenvolvimento de interfaces web.
+          </p>
+        </div>
+
+        <div class="tecnologias">
+
+          <article class="tecnologia html">
+            <div class="tecnologia-topo">
+              <span class="icone-tecnologia">H</span>
+              <small>MARCAÇÃO</small>
+            </div>
+
+            <h3>HTML</h3>
+            <p>
+              Define a estrutura e a organização semântica
+              do conteúdo apresentado em uma página.
+            </p>
+          </article>
+
+          <article class="tecnologia css">
+            <div class="tecnologia-topo">
+              <span class="icone-tecnologia">C</span>
+              <small>ESTILIZAÇÃO</small>
+            </div>
+
+            <h3>CSS</h3>
+            <p>
+              Controla a aparência visual e permite construir
+              layouts adaptáveis para diferentes dispositivos.
+            </p>
+          </article>
+
+          <article class="tecnologia javascript">
+            <div class="tecnologia-topo">
+              <span class="icone-tecnologia">JS</span>
+              <small>PROGRAMAÇÃO</small>
+            </div>
+
+            <h3>JavaScript</h3>
+            <p>
+              Adiciona interatividade e comportamentos dinâmicos
+              aos elementos de uma página web.
+            </p>
+          </article>
+
+          <article class="tecnologia svg">
+            <div class="tecnologia-topo">
+              <span class="icone-tecnologia">S</span>
+              <small>GRÁFICOS</small>
+            </div>
+
+            <h3>SVG</h3>
+            <p>
+              Permite criar elementos gráficos vetoriais,
+              mantendo a qualidade em diferentes tamanhos.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="conteudo-secao" id="layouts">
+        <div class="titulo-secao">
+          <h2>Organização de layouts</h2>
+          <p>
+            Flexbox e Grid são duas ferramentas importantes
+            para organizar elementos com CSS.
+          </p>
+        </div>
+
+        <div class="comparacao">
+          <article>
+            <h3>Flexbox</h3>
+            <p>
+              Trabalha principalmente com a distribuição de
+              elementos em uma direção, seja horizontal ou vertical.
+              É bastante útil para menus, cartões e alinhamentos.
+            </p>
+            <code>display: flex;</code>
+          </article>
+
+          <article>
+            <h3>CSS Grid</h3>
+            <p>
+              Permite organizar elementos em linhas e colunas,
+              sendo adequado para layouts completos, como a
+              estrutura desta página.
+            </p>
+            <code>display: grid;</code>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="rodape">
+      <p>Atividade 04 — Práticas de CSS</p>
+      <p>Análise e Desenvolvimento de Sistemas</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
